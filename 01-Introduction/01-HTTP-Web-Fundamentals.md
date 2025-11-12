@@ -339,11 +339,17 @@ It’s the best place to debug backend communication.
 You can think of the web like an eye model — each layer playing a role:
 
 User → Browser (Client)
+
 DNS → finds IP
+
 TCP → connects securely
+
 TLS → encrypts
+
 HTTP → sends and receives
+
 Cookies & Cache → remember info
+
 Response → rendered as web page
 
 That’s how the entire web cycle works — simple, stateless, and efficient.
