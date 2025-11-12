@@ -349,4 +349,4 @@ Response → rendered as web page
 That’s how the entire web cycle works — simple, stateless, and efficient.
 In Short:
 
-> HTTP is the language of the web — connecting your browser and the server through requests, responses, headers, cookies, and caching.
+HTTP is the language of the web — connecting your browser and the server through requests, responses, headers, cookies, and caching.
