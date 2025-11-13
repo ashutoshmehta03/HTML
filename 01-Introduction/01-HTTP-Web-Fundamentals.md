@@ -1,150 +1,174 @@
 ## +++ 1. What is HTTP? +++
 
-### HTTP stands for Hypertext Transfer Protocol — it’s a set of rules used to transfer data between the client (browser) and server on the web.
+#### HTTP stands for Hypertext Transfer Protocol — it’s a set of rules used to transfer data between the client (browser) and server on the web.
 
-## It allows communication between a frontend (browser) and a backend (server) in a request-response model.
+#### It allows communication between a frontend (browser) and a backend (server) in a request-response model.
 
-## It’s the foundation of all web communication — every website you open (like YouTube, Google, or api.hitesh.ai) runs on HTTP or HTTPS.
+#### It’s the foundation of all web communication — every website you open (like YouTube, Google, or api.hitesh.ai) runs on HTTP or HTTPS.
 
-+++ 2. Why is HTTP Important? +++
+## +++ 2. Why is HTTP Important? +++
 
-HTTP defines how browsers request data and how servers respond.
+#### HTTP defines how browsers request data and how servers respond.
 
-For example:
+#### Example:
 
-You open https://youtube.com
+- #### You open https://youtube.com
 
-Browser sends an HTTP Request
+- #### Browser sends an HTTP Request
 
-Server sends back an HTTP Response with HTML, images, text, etc.
+- #### Server sends back an HTTP Response with HTML, images, text, etc.
 
-Browser renders that page visually.
+- #### Browser renders that page visually.
 
-+++ 3. HTTP is Stateless +++
+## +++ 3. HTTP is Stateless +++
 
-HTTP does not remember anything from previous requests.
+#### HTTP does not remember anything from previous requests.
 
-Each new request is independent — that’s why it’s called a stateless protocol.
+#### Each new request is independent — that’s why it’s called a stateless protocol.
 
-Example:
+#### Example:
 
-You open YouTube home → HTTP request #1
+- #### You open YouTube home → HTTP request #1
 
-You open a new video → HTTP request #2
-Both are treated as new, fresh requests — no memory of what happened earlier.
-That’s why cookies or sessions are used to maintain state.
+- #### You open a new video → HTTP request #2
 
-+++ 4. Request–Response Model +++
+- #### Both are treated as new, fresh requests — no memory of what happened earlier.
 
-Every interaction on the web happens like this:
+- #### That’s why cookies or sessions are used to maintain state.
 
-Client (browser) → sends → Request
+## +++ 4. Request–Response Model +++
+
+#### Every interaction on the web happens like this:
+
+#### Client (browser) → sends → Request
+
 Server (backend) → replies with → Response
 
-Example:
+#### Example:
 
-GET https://api.hitesh.ai/courses
+- #### GET https://api.hitesh.ai/courses
 
-Server responds:
+- #### Server responds:
 
-200 OK
-Content-Type: application/json
+- #### 200 OK
 
-Common HTTP Methods (Verbs)
+- #### Content-Type: application/json
 
-Method Purpose Example
+- #### Common HTTP Methods (Verbs)
 
-GET Retrieve data Get list of users
-POST Send data Submit a form or login
-PUT Update data Update user info
-DELETE Remove data Delete a record
+- #### Method Purpose Example
 
-Example:
+#### GET Retrieve data Get list of users
 
-GET /users → fetch data
-POST /users → create data
-DELETE /users/1 → delete user 1
+#### POST Send data Submit a form or login
 
-+++ 5. Common Response Status Codes +++
+#### PUT Update data Update user info
 
-Code Meaning Example
+#### DELETE Remove data Delete a record
 
-200 OK Success Request processed correctly
-201 Created Resource created New user registered
-400 Bad Request Invalid input Missing fields
-401 Unauthorized Login required Token missing
-404 Not Found Resource not found Wrong URL
-500 Internal Server Error Server issue Code crash on backend
+#### Example:
 
-+++ 6. HTTP Headers +++
+- #### GET /users → fetch data
 
-Headers carry extra information about a request or response.
+- #### POST /users → create data
 
-They help define:
+- #### DELETE /users/1 → delete user 1
 
-Content type (HTML, JSON, etc.)
+## +++ 5. Common Response Status Codes +++
 
-Browser info
+#### Example
 
-Authentication tokens
+- #### 200 OK Success Request processed correctly
 
-Date/time
+- #### 201 Created Resource created New user registered
 
-Cache control
+- #### 400 Bad Request Invalid input Missing fields
 
-Cookies
+- #### 401 Unauthorized Login required Token missing
 
-Example:
+- #### 404 Not Found Resource not found Wrong URL
 
-Request Headers:
+- #### 500 Internal Server Error Server issue Code crash on backend
 
-GET /dashboard
-User-Agent: Chrome/123.0
-Accept: text/html
-Cookie: session_id=xyz123
+## +++ 6. HTTP Headers +++
 
-Response Headers:
+#### Headers carry extra information about a request or response.
 
-Content-Type: text/html
-Set-Cookie: session_id=xyz123; Secure; HttpOnly
-Cache-Control: max-age=3600
+#### They help define:
 
-+++ 7. What Happens When You Open a Website (Full Process) +++
+#### Content type (HTML, JSON, etc.)
 
-When you visit a site like https://api.hitesh.ai/course?id=1234, this happens:
+#### Browser info
 
-1. DNS Lookup:
-   Your browser asks the DNS (Domain Name System) for the IP address of api.hitesh.ai.
+#### Authentication tokens
 
-2. TCP Connection:
-   Browser connects to that IP using TCP (Transmission Control Protocol) — ensures reliable data transfer.
+#### Date/time
 
-3. TLS Handshake (HTTPS only):
-   Browser and server exchange security certificates for encrypted communication.
+#### Cache control
 
-4. Send HTTP Request:
-   Browser sends something like:
+#### Cookies
 
-GET /course?id=1234
-Host: api.hitesh.ai
+#### Example:
 
-5. Server Processes Request:
-   Backend (like Node.js) processes the request and prepares the response.
+- #### Request Headers:
 
-6. Server Sends Response:
+- #### GET /dashboard
+- #### User-Agent: Chrome/123.0
+- #### Accept: text/html
+- #### Cookie: session_id=xyz123
 
-200 OK
-Content-Type: text/html
+#### Response Headers:
 
-Body → HTML, image, JSON, etc.
+#### Content-Type: text/html
 
-7. Browser Receives Data & Renders:
-   Browser converts raw data into a visual web page.
+#### Set-Cookie: session_id=xyz123; Secure; HttpOnly
 
-8. TCP Connection Closed:
-   HTTP is stateless, so the connection ends after the response.
+#### Cache-Control: max-age=3600
 
-+++ 8. HTTPS — The Secure HTTP +++
+## +++ 7. What Happens When You Open a Website (Full Process) +++
+
+#### When you visit a site like https://api.hitesh.ai/course?id=1234, this happens:
+
+#### 1. DNS Lookup:
+
+- #### Your browser asks the DNS (Domain Name System) for the IP address of api.hitesh.ai.
+
+#### 2. TCP Connection:
+
+- #### Browser connects to that IP using TCP (Transmission Control Protocol) — ensures reliable data transfer.
+
+#### 3. TLS Handshake (HTTPS only):
+
+- #### Browser and server exchange security certificates for encrypted communication.
+
+#### 4. Send HTTP Request:
+
+- #### Browser sends something like:
+
+- #### GET /course?id=1234
+- #### Host: api.hitesh.ai
+
+#### 5. Server Processes Request:
+
+- #### Backend (like Node.js) processes the request and prepares the response.
+
+#### 6. Server Sends Response:
+
+- #### 200 OK
+
+- #### Content-Type: text/html
+
+- #### Body → HTML, image, JSON, etc.
+
+#### 7. Browser Receives Data & Renders:
+
+- #### Browser converts raw data into a visual web page.
+
+#### 8. TCP Connection Closed:
+
+- #### HTTP is stateless, so the connection ends after the response.
+
+## +++ 8. HTTPS — The Secure HTTP +++
 
 HTTPS = HTTP + Encryption (via TLS/SSL)
 
