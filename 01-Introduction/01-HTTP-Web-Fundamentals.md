@@ -1,10 +1,10 @@
-+++ 1. What is HTTP? +++
+## +++ 1. What is HTTP? +++
 
-HTTP stands for Hypertext Transfer Protocol — it’s a set of rules used to transfer data between the client (browser) and server on the web.
+### HTTP stands for Hypertext Transfer Protocol — it’s a set of rules used to transfer data between the client (browser) and server on the web.
 
-It allows communication between a frontend (browser) and a backend (server) in a request-response model.
+## It allows communication between a frontend (browser) and a backend (server) in a request-response model.
 
-It’s the foundation of all web communication — every website you open (like YouTube, Google, or api.hitesh.ai) runs on HTTP or HTTPS.
+## It’s the foundation of all web communication — every website you open (like YouTube, Google, or api.hitesh.ai) runs on HTTP or HTTPS.
 
 +++ 2. Why is HTTP Important? +++
 
